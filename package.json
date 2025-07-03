@@ -2,7 +2,7 @@
   "name": "koishi-plugin-auto-tata-group-name",
   "preview": true,
   "description": "个人自用,自动更新群聊名称的 Koishi 插件，根据群聊成员数量变化自动更新群名",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "types": "lib/index.d.ts",

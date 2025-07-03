@@ -18,8 +18,13 @@ export interface Config {
 
 export const Config: Schema<Config> = Schema.object({
   guildTemplates: Schema.array(Schema.object({
-    guildId: Schema.string().description('群聊ID').required(),
-    nameTemplate: Schema.string().description('该群的模板，使用{count}表示人数').default('({count})🦦獭家一爱相亲相').required()
+    guildId: Schema.string()
+      .description('群聊ID')
+      .required(),
+    nameTemplate: Schema.string()
+      .description('该群的模板，使用{count}表示人数')
+      .default('({count})🦦獭家一爱相亲相')
+      .required()
   })).description('群聊模板配置，配置了就表示监听该群').default([]),
   updateDelay: Schema.number().description('成员变动后等待平台更新的延迟时间（毫秒）').default(2000).min(500).max(10000)
 })
